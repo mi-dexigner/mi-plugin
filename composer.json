@@ -1,6 +1,6 @@
 {
-    "name": "delivery-date/delivery-date",
-    "description": "Awesome starter plugin example",
+    "name": "mi-plugin/mi-plugin",
+    "description": "Create a basic setup wordpress plugin",
     "type": "project",
     "license": "GPL",
     "authors": [
