@@ -1,0 +1,86 @@
+// for loop
+// @for $var from <start> through <end>
+
+@for $space from 1 through 20
+{
+	.mt-#{$space}
+	{
+		margin-top:10px * $space;
+	}
+	.mb-#{$space}
+	{
+		margin-bottom:10px * $space;
+	}
+
+	.ml-#{$space}
+	{
+		margin-left:10px * $space;
+	}
+	.mr-#{$space}
+	{
+		margin-right:10px * $space;
+	}
+
+	.pt-#{$space}
+	{
+		padding-top:10px * $space;
+	}
+	.pb-#{$space}
+	{
+		padding-bottom:10px * $space;
+	}
+
+	.pl-#{$space}
+	{
+		padding-left:10px * $space;
+	}
+	.pr-#{$space}
+	{
+		padding-right:10px * $space;
+	}
+	
+}
+// While loop
+// @while $var something int
+
+$num: 1;
+@while $num < 7{
+
+	$width: percentage(1 / $num);
+	.grid-#{$num}
+	{
+		width:$width;
+	}
+	$num: $num + 1;
+}
+
+// EACH loop
+// @each key, value in array {}
+
+$gray : #f7f7fd;
+$white : #fff;
+$black : #000;
+$red : #f00;
+$primary : #ccc;
+$secondary : #333;
+
+$colours:(
+'gray':$gray,
+'white':$white,
+'black':$black,
+'red':$red,
+'primary':$primary,
+'secondary':$secondary
+);
+
+@each $colour , $hex in $colours
+{
+	// .text-white{color:#fff;}
+	.text-#{$colour}{
+		color:$hex;
+	}
+
+	.bg-#{$colour}{
+		background-color:$hex;
+	}
+}

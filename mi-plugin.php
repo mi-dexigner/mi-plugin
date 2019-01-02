@@ -43,8 +43,8 @@ if ( !class_exists( 'MIPlugin' ) ) {
 		}
 		function enqueue() {
 			// enqueue all our scripts
-			wp_enqueue_style( 'mypluginstyle', plugins_url( '/admin/assets/mystyle.css', __FILE__ ) );
-			wp_enqueue_script( 'mypluginscript', plugins_url( '/admin/assets/myscript.js', __FILE__ ) );
+			wp_enqueue_style( 'mypluginstyle', plugins_url( '/assets/css/admin.css', __FILE__ ) );
+			wp_enqueue_script( 'mypluginscript', plugins_url( '/assets/js/admin.js', __FILE__ ) );
 		}
 		function activate() {
 			Activate::activate();

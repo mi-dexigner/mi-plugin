@@ -1,0 +1,143 @@
+@mixin banner{
+	width:100%;
+	position: relative;
+	color:#fff;
+	&:after{
+	content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+    opacity: .7;
+     z-index: 1;
+     @supports (mix-blend-mode: hue) {
+        opacity: 1;
+        mix-blend-mode: color;
+        mix-blend-mode: hard-light;
+        mix-blend-mode: hue;
+    }
+
+}
+.caption-text{
+	color: #fff;
+}
+> * {
+    z-index: 100;
+}
+}
+@mixin button{
+	-moz-user-select: none;
+	background: $primaryBtn;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+	&:hover{
+	background: $primaryHoverBtn;	
+	}
+}
+@mixin clearFix{
+	&:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+}
+
+@mixin grid($cols, $margin){
+	float:left;
+	width: ((100% - (($cols - 1) * $margin)) / $cols );
+	margin-right:$margin;
+	margin-bottom:$margin;
+	&:nth-child(#{$cols}n){
+	margin-right:0;
+	}
+}
+@mixin sticky{
+	animation:slide-down 0.7s;
+    background-color: rgba(102, 204, 0, 0.95);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+     opacity:0.9;
+      box-shadow:0 2px 6px rgba(0,0,0,0.2); 
+}
+@mixin translateX($val){
+	-webkit-transform:translateX($val);
+	-moz-transform:translateX($val);
+	-ms-transform:translateX($val);
+	-o-transform:translateX($val);
+	transform:translateX($val);
+}
+@mixin animate-time($time: 320ms){
+	-webkit-transition:$time ease;
+	-moz-transition:$time ease;
+	-ms-transition:$time ease;
+	-o-transition:$time ease;
+	transition:$time ease;
+}
+
+@mixin mediaQuery($args...){
+  @if length($args) == 1{
+    @media screen and (max-width: nth($args, 1)){
+      @content;
+    }
+  }
+  @if length($args) == 2{
+    @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)){
+      @content;
+    }
+  }
+}
+
+@mixin loader{
+ 	width: 100px;
+  	height: 100px;
+  	border-radius: 100%;
+  	position: absolute;
+  	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+  	margin: auto auto;
+  &:before,&:after{
+  	position: absolute;
+  top: 10px;
+  left: -10px;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  }
+  &:before{
+  border-top-color: #ed7d3a;
+  z-index: 100;
+  /*spin animation*/
+  animation: spin 1s ease-out infinite;
+  -webkit-animation: spin 1s ease-out infinite, color-change 1s ease-out infinite alternate;
+	-moz-animation: spin 1s ease-out infinite, color-change 1s ease-out infinite alternate;
+	-ms-animation: spin 1s ease-out infinite, color-change 1s ease-out infinite alternate;
+	-o-animation: spin 1s ease-out infinite, color-change 1s ease-out infinite alternate;
+}
+&:after{
+  border-color: #ccc;
+}
+}

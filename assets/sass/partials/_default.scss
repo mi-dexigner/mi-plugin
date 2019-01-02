@@ -1,0 +1,59 @@
+.wrapper{
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+.background-image {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+.background-no-repeat {
+	background-repeat: no-repeat
+}
+.dtable {
+	display: table;
+	width: 100%;
+	height: 100%;
+ 	.dtable-cell {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle
+}
+
+}
+
+.hidden {
+  display: none;
+}
+.img {
+	width:100%;
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.img-left{
+	width:100%;
+	max-width:50px;
+}
+.img-right{
+	width:100%;
+	max-width:50px;
+}
+.f-left {
+	float: left !important;
+}
+.f-right {
+	float: right !important;
+}
+.fix {
+	overflow: hidden !important;
+}
+.height-100{
+	height: 100vh;
+}
+.height-fix{
+	height: 250px;
+}

@@ -1,5 +1,11 @@
-// Compass CSS3
-@import "compass/css3";
-@import "mixins";
-
+// Compass 
+@import "compass/reset";
+@import "compass";
+@import "partials/_base";
+@import "partials/_functions";
+@import "partials/_loop";
+@import "partials/_mixins";
+@import "partials/_animation";
+@import "partials/_default";
+@import "partials/_modules";
 // Your scss here!

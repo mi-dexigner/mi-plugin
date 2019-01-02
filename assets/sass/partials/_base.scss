@@ -1,0 +1,59 @@
+$base-font-size:16px;
+$default-rhythm-border-style:dashed;
+$padding:25px;
+$primaryColor: #032f3e;
+$primaryHoverColor: #032f3e;
+$secondaryColor:#f8f9fb;
+$secondaryHoverColor:#f8f9fb;
+$primaryBtn: #1696e7;
+$primaryHoverBtn: #032f3e;;
+$secondaryBtn:#f8f9fb;
+$secondaryHoverBtn:#f8f9fb;
+$container: 1440px;
+
+/* Cutom font set */
+//@include font-face("Blooming Grove", font-files("icofont.ttf", "icofont.otf"));
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+@include establish-baseline;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+a{
+@include transition-property(all);
+@include transition-duration(2s);
+@include transition-timing-function(ease-in);
+@include link-colors(#708c87, red, red, blue, blue);
+//@include unstyled-link();
+}
+
+ul.social-links{@include horizontal-list;}
+ul.social-links li {list-style: none;
+a{
+	display: block;
+	width:65px;
+	height: 65px;
+	text-indent: -999px;
+}
+}
+
+
+.one{
+	@include leader();
+	@include margin-leader();
+	@include padding-leader();
+}
+
+.two{
+	@include rhythm-borders(5px);
+}
+.three{
+	@include adjust-font-size-to(18px);
+}
+.four{
+	@include trailer();
+@include trailing-border();
+}

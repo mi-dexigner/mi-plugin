@@ -1,0 +1,14 @@
+@function half-height($first,$second){
+	@return $container / $first + $padding / $second;
+}
+
+/*  sprites set */
+/* $icons-spacing:0px;
+$icons-layout:smart; // diagonal,vertical,horizontal,smart
+@import "icons.png";
+@include all-icons-sprites; */
+/* 
+icons-sprite-height(some_icon);
+$width: icons-sprite-width(some_icon);
+.twitter { @include icons-sprite(twitter); }
+.facebook { @include icons-sprite(facebook); } */

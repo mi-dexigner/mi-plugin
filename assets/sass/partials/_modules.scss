@@ -1,0 +1,29 @@
+/* header sticky */
+.header-sticky.sticky{
+	@include sticky;
+}
+/*  Page Banner */
+#inner-banner{
+	@include banner;
+
+}
+/* button  */
+.btn {
+	@include button;
+}
+
+
+/*  loader  */
+
+#mi-loader{
+	position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(255,255,255);
+    z-index: 9999;
+    height: 100%;
+    width:100%;
+    .loader{
+	@include loader;
+    }
+}
