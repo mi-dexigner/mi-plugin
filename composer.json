@@ -1,7 +1,8 @@
 {
-    "name": "mi-plugin/mi-plugin",
     "description": "Create a basic setup wordpress plugin",
-    "license": "GPL-2.0-or-later",
+    "name": "mi-plugin/mi-plugin",
+    "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "MI Dexigner",
@@ -9,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=5.3.7"
+    },
     "autoload": {
         "psr-4": {"Inc\\": "./inc"}
     }
