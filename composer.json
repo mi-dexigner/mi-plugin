@@ -1,7 +1,6 @@
 {
     "name": "mi-plugin/mi-plugin",
     "description": "Create a basic setup wordpress plugin",
-    "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
